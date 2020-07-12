@@ -1,0 +1,3 @@
+#!/bin/sh
+EXAMPLE_PATH=$PWD/$1
+GOPATH=$EXAMPLE_PATH go run $EXAMPLE_PATH/src/main.go
