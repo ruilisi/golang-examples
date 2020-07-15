@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <form id ="signup" method="post" name="form">
+      <div>
+        请输入手机或者邮箱
+        </br>
+        <input type="text" name="id" />
+      </div>
+      <div>
+        请输入密码（拥有大小写字母以及数字，至少8位）
+        </br>
+        <input type="password" name="password"/>
+      </div>
+      <div>
+        <button type="submit" name = "signin">注册</button> 
+      </div>
+      <div>
+        {{.text}}
+      </div>
+    </form>
+  </body>
+</html>

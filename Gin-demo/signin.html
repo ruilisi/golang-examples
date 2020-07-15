@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <meta charset="UTF-8">
+  <head>
+  </head>
+  <body>
+    <form id = "signin" method="post" name="form">
+      <div>
+        用户名
+        <input type="text" name = "id"/>
+      </div>
+       <div>
+         密码
+         <input type="password" name = "password"/>
+      </div>
+       <div>
+         <button type="submit" id = "signin" >登录</button>
+         <button type="submit" id = "signup" >注册</button> 
+      </div>
+      <div>
+        <input type="hidden" id = "flag" name="flag"/>
+      </div>
+      {{.text}}
+    </form>
+  </body>
+</html>
+
+<script  type="text/javascript" >
+
+  console.log(2)
+  var bt1 = document.getElementById("signin")
+  bt1.onclick = function(){
+    document.getElementById("flag").innerHTML = "1"
+    console.log(1)
+  }
+  var bt2 = document.getElementById("signup")
+  bt2.onclick = function(){
+    document.getElementById("flag").setAttribute("value",2)
+    console.log(2)
+  }
+</script>
