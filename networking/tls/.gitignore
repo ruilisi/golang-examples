@@ -1,0 +1,6 @@
+*
+!*.go
+!*.sh
+!openssl.cnf
+!README.md
+!.gitignore
