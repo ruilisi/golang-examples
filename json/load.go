@@ -33,7 +33,7 @@ func (p Person) String() string {
 }
 func main() {
 	var person Person
-	loadJSON("person.json", &person)
+	loadJSON("C:\\Users\\62774\\Desktop\\golang-examples\\json\\person.json", &person)
 
 	fmt.Println("Person", person.String())
 }
