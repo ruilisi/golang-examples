@@ -21,6 +21,7 @@ func main() {
 	}
 
 	conn, err := net.DialIP("ip4:icmp", addr, addr)
+	fmt.Println(err)
 	checkError(err)
 
 	var msg [512]byte

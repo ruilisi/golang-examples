@@ -12,19 +12,16 @@ import (
 func main() {
 
 	service := ":1200"
-	tcpAddr,
-	err := net.ResolveTCPAddr("tcp4", service)
+	tcpAddr, err := net.ResolveTCPAddr("tcp4", service)
 	checkError(err)
 	listener, err := net.ListenTCP("tcp", tcpAddr)
 	checkError(err)
 
 	for {
-		fmt.Println("dsasdfsdff")
 		conn, _ := listener.Accept()
-		fmt.Println("dsf")
-		//if err != nil {
-		//	continue
-		//}
+		if err != nil {
+			continue
+		}
 
 		daytime := time.Now().String()
 		conn.Write([]byte(daytime)) // don't care about return value
