@@ -4,7 +4,7 @@
 int main() {
   printf("%d\n", sum(1, 2));
 
-  int n = 100000;
-  printf("------ Now showing first %d primes ------", 1000);
+  int n = 10;
+  printf("------ Now showing first %d primes ------\n", 1000);
   showPrimes(n);
 }

@@ -4,7 +4,10 @@ package main
 //void showPrimes(int n);
 import "C"
 
-import "fmt"
+import (
+	"fmt"
+	"time"
+)
 
 // 返回生成自然数序列的管道: 2, 3, 4, ...
 func GenerateNatural() chan int {
@@ -39,6 +42,7 @@ func sum(a, b C.int) C.int {
 func showPrimes(_n C.int) {
 	n := int(_n)
 	ch := GenerateNatural() // 自然数序列: 2, 3, 4, ...
+	time.Sleep(1 * time.Second)
 	for i := 0; i < n; i++ {
 		prime := <-ch // 新出现的素数
 		fmt.Printf("%v: %v\n", i+1, prime)
