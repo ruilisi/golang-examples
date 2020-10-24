@@ -16,7 +16,6 @@ func main() {
 		for t := range ticker.C {
 			c <- 1
 			fmt.Println("Tick at", t)
-			<-c
 		}
 	}()
 

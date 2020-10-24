@@ -23,3 +23,11 @@
 ## [replace-method-of-interfacewrap-interface.go](replace-method-of-interfacewrap-interface.go)
 
 `Fatal()` 中可以存放多种任何接口，无论是什么类型都可以调用
+
+### 接口隐式转换
+```
+a io.ReadCloser = (*os.File)(f) // 隐式转换, *os.File 满足 io.ReadCloser 接口
+b io.Reader     = a             // 隐式转换, io.ReadCloser 满足 io.Reader 接口
+c io.Closer     = a             // 隐式转换, io.ReadCloser 满足 io.Closer 接口
+d io.Reader     = c.(io.Reader) // 显式转换, io.Closer 不满足 io.Reader 接口
+```
